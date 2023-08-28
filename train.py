@@ -9,7 +9,7 @@ from argparse import ArgumentParser
 
 from tfdiff.params import all_params
 from tfdiff.learner import tfdiffLearner
-from tfdiff.WiFi_model import tfdiff_WiFi
+from tfdiff.wifi_model import tfdiff_WiFi
 from tfdiff.mimo_model import tfdiff_mimo
 from tfdiff.eeg_model import tfdiff_eeg
 from tfdiff.fmcw_model import tfdiff_fmcw
@@ -48,13 +48,13 @@ def train_distributed(replica_id, replica_count, port, params):
     device = torch.device('cuda', replica_id)
     torch.cuda.set_device(device)
     if params.task_id == 0:
-        model = tfdiff_eeg(params).to(device)
-    elif params.task_id == 1:
-        model = tfdiff_mimo(params).to(device)
-    elif params.task_id == 2:
         model = tfdiff_WiFi(params).to(device)
-    elif params.task_id == 3:
+    elif params.task_id == 1:
         model = tfdiff_fmcw(params).to(device)
+    elif params.task_id == 2:
+        model = tfdiff_mimo(params).to(device)
+    elif params.task_id == 3:
+        model = tfdiff_eeg(params).to(device)
     else:    
         raise ValueError("Unexpected task_id.")
     model = DistributedDataParallel(model, device_ids=[replica_id])
