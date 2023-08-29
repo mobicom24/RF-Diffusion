@@ -72,7 +72,7 @@ In the following part, we use `task_id` to differentiate between four types of t
 By executing the following code, you can generate new Wi-Fi data, and the corresponding average SSIM (Structural Similarity Index Measure) will be displayed in the command line.
 
 ```python
-python3 inference --task_id 0
+python3 inference.py --task_id 0
 ```
 
 The generated data are stored in `.mat` format, and can be found in `./dataset/wifi/output`.
@@ -85,7 +85,7 @@ Our model showcases the best performance in both SSIM (Structure Similarity Inde
 By executing the following code, you will generate FMCW data, and the corresponding average SSIM (Structural Similarity Index measure) will be displayed in the command line.
 
 ```python
-python3 inference --task_id 1
+python3 inference.py --task_id 1
 ```
 
 The generated data are stored in `.mat` format, and can be found at `./dataset/fmcw/output`.
@@ -98,7 +98,7 @@ Our model showcases the best performance in both SSIM (Structure Similarity Inde
 ### 2.1 Augmented Wireless Sensing
 
 A pre-trained RF-Diffusion can be leveraged as a data augmenter, which generates synthetic RF signals of the designated type. The synthetic samples are then mixed with the original dataset, collectively employed to train the wireless sensing model.
-You can try performing the data generation task on your own dataset based on the instructions in [Data Generation](#1-data-generation), and train your own model with both real-world and synthetic data.
+You can try performing the data generation task on your own dataset based on the instructions in [RF Data Generation](#1-rf-data-generation), and train your own model with both real-world and synthetic data.
 
 To retrain a new model, you only need to place your own data files within the `./dataset/wifi/raw` or `./dataset/fmcw/raw` directory, and then execute the `train.py` script to retrain. You may need to properly set the `./tiff/params.py` file to correspond to your input data format.
 
@@ -113,7 +113,7 @@ Taking Wi-Fi gesture recognition as an example. We choose the Widar3.0 dataset, 
 By executing the following command, a downlink channel estimation for 5G FDD system can be performed. 
 
 ```python
-python3 inference --task_id 2
+python3 inference.py --task_id 2
 ```
 
 The corresponding average Signal-to-Noise Ratio (SNR) will be displayed in the command line.
@@ -137,7 +137,7 @@ unzip eeg.zip -d [RF-Diffusion/model]
 By executing the following code, RF-Diffusion can be leveraged to denoise the EEG signals which is contaminated by EOG interference. 
 
 ```python
-python3 inference --task_id 3
+python3 inference.py --task_id 3
 ```
 
 The corresponding average Signal-to-Noise Ratio (SNR) will be displayed in the command line. The denoised EEG data can be found at `./dataset/eeg/output`.
