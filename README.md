@@ -8,7 +8,7 @@ An intuitive comparison between RF-Diffusion and three other prevalent generativ
 Please note that all these methods generate the **raw complex-valued signals**, and the spectrogram are shown for ease of illustration.
 
 
-|     | Ground Truth  | RF-Diffusion  | DDPM[^DDPM]  | DCGAN[^DCGAN]  | CVAE^[CVAE]  | 
+|     | Ground Truth  | RF-Diffusion  | DDPM[^DDPM]  | DCGAN[^DCGAN]  | CVAE[^CVAE]  | 
 |  ----  | ----  | ----  | ----  | ----  | ----  | 
 | **Wi-Fi**  | <img src="./img/0-wifi-gesture-gt.gif" height=100> <img src="./img/0-wifi-fall-gt.gif"  height=100>| <img src="./img/0-wifi-gesture-ours.gif" height=100 ><img src="./img/0-wifi-fall-ours.gif"  height=100>| <img src="./img/0-wifi-gesture-ddpm.gif" height=100> <img src="./img/0-wifi-fall-ddpm.gif"  height=100>| <img src="./img/0-wifi-gesture-gan.gif" height=100><img src="./img/0-wifi-fall-gan.gif"  height=100> | <img src="./img/0-wifi-gesture-vae.gif" height=100> <img src="./img/0-wifi-fall-vae.gif"  height=100> |
 | **FMCW**   | <img src="./img/0-fmcw-1-gt.gif" height=100> <img src="./img/0-fmcw-2-gt.gif"  height=100> | <img src="./img/0-fmcw-1-ours.gif" height=100> <img src="./img/0-fmcw-2-ours.gif" height=100> | <img src="./img/0-fmcw-1-ddpm.gif" height=100> <img src="./img/0-fmcw-2-ddpm.gif" height=100> | <img src="./img/0-fmcw-1-gan.gif" height=100> <img src="./img/0-fmcw-2-gan.gif" height=100> | <img src="./img/0-fmcw-1-vae.gif" height=100> <img src="./img/0-fmcw-2-vae.gif" height=100> |
