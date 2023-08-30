@@ -104,7 +104,7 @@ You can try performing the data generation task on your own dataset based on the
 
 To retrain a new model, you only need to place your own data files within the `./dataset/wifi/raw` or `./dataset/fmcw/raw` directory, and then execute the `train.py` script to retrain. You may need to properly set the `./tfdiff/params.py` file to correspond to your input data format.
 
-Taking Wi-Fi gesture recognition as an example. We choose the Widar3.0 dataset, and perform augmented wireless sensing on two models, Widar3.0 and EI, to test the performance gain of data augmentation in both cross-domain and in-domain scenarios.
+Taking Wi-Fi gesture recognition as an example. We choose the Widar3.0 dataset and perform augmented wireless sensing on two models, Widar3.0 and EI, to test the performance gain of data augmentation in both cross-domain and in-domain scenarios.
 <div align="center">    <img src=".\img\8-exp-sensing-cross.png"  height=230><img src=".\img\9-exp-sensing-in.png" height=230> </div>
 
 <div align="center">    <img src=".\img\10-exp-sensing-data.png"  height=230> </div>
@@ -128,7 +128,7 @@ The channel estimation is evaluated based on the [Argos](https://renew.rice.edu/
 ### 2.3 Supplementary: EEG Signal Denoise
 
 RF-Diffusion is designed to generate a wide range of time-series data. While its primary application is in the wireless/RF signals domain, its capabilities extend beyond that.
-To verify this, we provide an supplementary case study for EEG denoising, which doesn't appear in our submitted paper due to the page limitation.
+To verify this, we provide a supplementary case study for EEG denoising, which doesn't appear in our submitted paper due to the page limitation.
 
 To run the EEG denoising application, you only need to extract the contents of `eeg.zip` and place the extracted folder in the `model` folder. 
 
@@ -144,7 +144,7 @@ python3 inference.py --task_id 3
 
 The corresponding average Signal-to-Noise Ratio (SNR) will be displayed in the command line. The denoised EEG data can be found at `./dataset/eeg/output`.
 
-Our EEG denoising evaluation is tested on the [GCTNET](https://github.com/JinY97/GCTNet/tree/main/data) dataset. Compared with other denoising methods, RF-Diffusion demonstrate a delightful result.
+Our EEG denoising evaluation is tested on the [GCTNET](https://github.com/JinY97/GCTNet/tree/main/data) dataset. Compared with other denoising methods, RF-Diffusion demonstrates a delightful result.
 
 
 <div align="center">    <img src=".\img\13-exp-eeg-sample.png"  height=230><img src=".\img\14-exp-eeg-snr.png" height=230> </div>
