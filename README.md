@@ -71,7 +71,7 @@ In the following part, we use `task_id` to differentiate between four types of t
 
 ### 1.1 Wi-Fi Data Generation
 
-By executing the following code, you can generate new Wi-Fi data, and the corresponding average SSIM (Structural Similarity Index Measure) will be displayed in the command line.
+By executing the following code, you can generate new Wi-Fi data, and the corresponding average SSIM (Structural Similarity Index Measure) and FID (Fréchet Inception Distance) will be displayed in the command line, which matches the values reported in section 6.2: Overall Generation Quality of the paper.
 
 ```python
 python3 inference.py --task_id 0
@@ -84,7 +84,7 @@ Our model showcases the best performance in both SSIM (Structure Similarity Inde
 
 ### 1.2 FMCW Data Generation
 
-By executing the following code, you will generate FMCW data, and the corresponding average SSIM (Structural Similarity Index measure) will be displayed in the command line.
+By executing the following code, you will generate FMCW data, and the corresponding average SSIM (Structural Similarity Index Measure) and FID (Fréchet Inception Distance) will be displayed in the command line, which matches the values reported in section 6.2: Overall Generation Quality of the paper.
 
 ```python
 python3 inference.py --task_id 1
@@ -104,7 +104,7 @@ You can try performing the data generation task on your own dataset based on the
 
 To retrain a new model, you only need to place your own data files within the `./dataset/wifi/raw` or `./dataset/fmcw/raw` directory, and then execute the `train.py` script to retrain. You may need to properly set the `./tfdiff/params.py` file to correspond to your input data format.
 
-Taking Wi-Fi gesture recognition as an example. We choose the Widar3.0 dataset and perform augmented wireless sensing on two models, Widar3.0 and EI, to test the performance gain of data augmentation in both cross-domain and in-domain scenarios.
+Taking Wi-Fi gesture recognition as an example. We choose the Widar3.0 dataset and perform augmented wireless sensing on two models, Widar3.0 and EI, to test the performance gain of data augmentation in both cross-domain and in-domain scenarios, which can be found in section 7.1: Wi-Fi Gesture Recognition of the paper.
 <div align="center">    <img src=".\img\8-exp-sensing-cross.png"  height=230><img src=".\img\9-exp-sensing-in.png" height=230> </div>
 
 <div align="center">    <img src=".\img\10-exp-sensing-data.png"  height=230> </div>
@@ -118,7 +118,7 @@ By executing the following command, a downlink channel estimation for 5G FDD sys
 python3 inference.py --task_id 2
 ```
 
-The corresponding average Signal-to-Noise Ratio (SNR) will be displayed in the command line.
+The corresponding average Signal-to-Noise Ratio (SNR) will be displayed in the command line and found in section 7.2: 5G FDD Channel Estimation of the paper.
 
 The channel estimation is evaluated based on the [Argos](https://renew.rice.edu/dataset-argos.html) dataset. As the results show, our model showcases the best performance compared to state-of-the-art models.
 
