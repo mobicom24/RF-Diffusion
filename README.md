@@ -1,4 +1,6 @@
 # Artifact for MobiCom'24: RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing)
 
 ## Overview
 We introduce RF-Diffusion, a versatile generative model designed for wireless data. RF-Diffusion is capable of generating various types of signals, including Wi-Fi, FMCW Radar, 5G, and even modalities beyond RF (e.g., EEG signal), showcasing RF-Diffusion's prowess across different signal categories. We extensively evaluate RF-Diffusion's generative capabilities and validate its effectiveness in multiple downstream tasks, including Wi-Fi sensing, 5G channel estimation, and EEG denoising.
@@ -21,30 +23,32 @@ As shown, RF-Diffusion generates signals that accurately retain their physical f
 ## Running the Evaluation Script
 You can run the evaluation script that produces the major figures in our paper in two ways.
 
-1. **(Recommended) Google Colab Notebook**
+**1. (Recommended) Google Colab Notebook**
   * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime tab```, select ```Run all```.
   * Please wait for 20 seconds as the data are being processed.
   * The figures will be displayed in your browser.
-2. **Local Setup**
+    
+**2. Local Setup**
   * Clone this repository.
-  * Install Python 3 if you have not already. Then, run pip3 install -r requirements.txt at the root directory of this repo to install the dependencies.
-  * Run python3 plot.py at the root directory of this repo and wait for ~3 minutes as the data are being processed.
-  * A fig/ directory will be created, and figures used in our paper can be found there. Tables will be printed to stdout.
+  * Install [Python 3](https://www.python.org/downloads/) if you have not already. Then, run pip3 install ```-r requirements.txt``` at the root directory of ```/plots``` folder to install the dependencies.
+  * Run code files in ```/plots/code``` directory one by one and wait for 20 seconds as the data are being processed.
+  * In ```/plots/img``` directory, figures used in our paper can be found.
 
 
-## Table of Contents
+## Further Testing and Customization
 
-- [RF-Diffusion](#rf-diffusion)
-  - [Table of Contents](#table-of-contents)
-  - [0. Prerequisite](#0-prerequisite)
-  - [1. RF Data Generation](#1-rf-data-generation)
-    - [1.1 Wi-Fi Data Generation](#11-wi-fi-data-generation)
-    - [1.2 FMCW Data Generation](#12-fmcw-data-generation)
-  - [2. Case Study](#2-case-study)
-    - [2.1 Augmented Wireless Sensing](#21-augmented-wireless-sensing)
-    - [2.2 5G FDD Channel Estimation](#22-5g-fdd-channel-estimation)
-    - [2.3 Supplementary: EEG Signal Denoise](#23-supplementary-eeg-signal-denoise)
+In this section, we offer training code, testing code, and pre-trained models. You can utilize our pre-trained models for further testing and even customize the models according to your specific tasks. This will significantly foster the widespread application of RF-Diffusion within the community.
 
+<!--
+- [0. Prerequisite](#0-prerequisite)
+- [1. RF Data Generation](#1-rf-data-generation)
+  - [1.1 Wi-Fi Data Generation](#11-wi-fi-data-generation)
+  - [1.2 FMCW Data Generation](#12-fmcw-data-generation)
+- [2. Case Study](#2-case-study)
+  - [2.1 Augmented Wireless Sensing](#21-augmented-wireless-sensing)
+  - [2.2 5G FDD Channel Estimation](#22-5g-fdd-channel-estimation)
+  - [2.3 Supplementary: EEG Signal Denoise](#23-supplementary-eeg-signal-denoise)
+-->
 
 ## 0. Prerequisite
 
@@ -162,8 +166,8 @@ Our EEG denoising evaluation is tested on the [GCTNET](https://github.com/JinY97
 
 <div align="center">    <img src=".\img\13-exp-eeg-sample.png"  height=230><img src=".\img\14-exp-eeg-snr.png" height=230> </div>
 
-## license
-The cond, data and related scripts are made available under the GNU General Public License v3.0. By downloading it or using them, you agree to the terms of this license.
+## License
+The code, data and related scripts are made available under the GNU General Public License v3.0. By downloading it or using them, you agree to the terms of this license.
 
 ## Reference
 If you use our dataset in your work, please reference it using
