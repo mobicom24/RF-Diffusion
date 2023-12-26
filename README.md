@@ -18,6 +18,18 @@ Please note that all these methods generate the **raw complex-valued signals**, 
 
 As shown, RF-Diffusion generates signals that accurately retain their physical features.
 
+## Running the Evaluation Script
+You can run the evaluation script that produces the major figures in our paper in two ways.
+
+1. **(Recommended) Google Colab Notebook**
+  * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime tab```, select ```Run all```.
+  * Please wait for 20 seconds as the data are being processed.
+  * The figures will be displayed in your browser.
+2. **Local Setup**
+  * Clone this repository.
+  * Install Python 3 if you have not already. Then, run pip3 install -r requirements.txt at the root directory of this repo to install the dependencies.
+  * Run python3 plot.py at the root directory of this repo and wait for ~3 minutes as the data are being processed.
+  * A fig/ directory will be created, and figures used in our paper can be found there. Tables will be printed to stdout.
 
 
 ## Table of Contents
