@@ -254,11 +254,8 @@ def print_fid(out_dir,data_dir):
     generated_images_folder = out_dir
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dims = 192
-    # 加载预训练的Inception-v3模型
-    inception_model = torchvision.models.inception_v3(pretrained=True)
-
     # 计算FID距离值
-    fid_value = fid_score.calculate_fid_given_paths([real_images_folder, generated_images_folder],inception_model,device=device,dims=dims)
+    fid_value = fid_score.calculate_fid_given_paths([real_images_folder, generated_images_folder],batch_size=1,device=device,dims=dims,num_workers=1)
     print('FID value:', fid_value)
 
 def main(args):
