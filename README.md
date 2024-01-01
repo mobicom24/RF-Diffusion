@@ -172,7 +172,7 @@ The code, data and related scripts are made available under the GNU General Publ
 ## Reference
 If you use our dataset in your work, please reference it using
 ```
-@inproceedings {Chi2023RF-Diffusion,
+@inproceedings {Chi2024RF,
     author = {Chi, Guoxuan and Yang, Zheng and Wu, Chenshu and Xu, Jingao and Gao, Yuchong and Liu, Yunhao Han, Tony Xiao},
     title = {{RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion}},
     booktitle = {The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom'24)},
