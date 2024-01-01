@@ -1,0 +1,7 @@
+ssim_mean = [0.8064, 0.7135, 0.4391];
+ssim_std = [0.1128, 0.1547, 0.1958];
+
+fsd_mean = [4.417, 7.534, 14.72];
+fsd_std = [1.051, 1.135, 2.944];
+
+save('exp_impact_diffusion_method','ssim_mean',ssim_mean,)
