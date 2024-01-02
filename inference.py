@@ -358,6 +358,6 @@ if __name__ == '__main__':
                         help='directories from which to store genrated data file')
     parser.add_argument('--cond_dir', default=None,
                         help='directories from which to read condition files for generation')
-    parser.add_argument('--device', default='cuda',
+    parser.add_argument('--device', default='cpu',
                         help='device for data generation')
     main(parser.parse_args())
