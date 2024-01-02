@@ -158,12 +158,12 @@ def save_wifi(out_dir, data, pred, cond, batch, index=0):
     ax1 = plt.subplot(1, 2, 1)
     im1 = ax1.matshow(data_spec_dB, cmap='viridis', origin='lower')    
     ax1.set_title('Data Spectrogram (dB)')
-    plt.colorbar(im1, format='%+2.0f dB', ax=ax1)
+    plt.colorbar(im1, format='%+2.0f dB', ax=ax1,orientation='horizontal', pad=0.05)
 
     ax2 = plt.subplot(1, 2, 2)
     im2 = ax2.matshow(pred_spec_dB, cmap='viridis', origin='lower')
     ax2.set_title('Prediction Spectrogram (dB)')
-    plt.colorbar(im2, format='%+2.0f dB', ax=ax2)
+    plt.colorbar(im2, format='%+2.0f dB', ax=ax2,orientation='horizontal', pad=0.05)
 
     # 保存整个图表为 jpg 文件
     plt.savefig(file_name)
@@ -218,12 +218,12 @@ def save_fmcw(out_dir, data, pred, cond, batch,index=0):
     # Create a subplot with two columns (one for each spectrogram)
     # 绘制并保存第一个图表
     plt.figure(figsize=(6, 7))
-    ax1 = plt.subplot(1, 2, 1)
+    ax1 = plt.subplot(2, 1, 1)
     im1 = ax1.matshow(data_spec_dB, cmap='viridis', origin='lower')    
     ax1.set_title('Data Spectrogram (dB)')
     plt.colorbar(im1, format='%+2.0f dB', ax=ax1)
 
-    ax2 = plt.subplot(1, 2, 2)
+    ax2 = plt.subplot(2, 1, 2)
     im2 = ax2.matshow(pred_spec_dB, cmap='viridis', origin='lower')
     ax2.set_title('Prediction Spectrogram (dB)')
     plt.colorbar(im2, format='%+2.0f dB', ax=ax2)
