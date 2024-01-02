@@ -154,7 +154,7 @@ def save_wifi(out_dir, data, pred, cond, batch, index=0):
     pred_spec_dB = 20 * np.log10(pred_spec_mag.numpy() + 1e-6)
     # Create a subplot with two columns (one for each spectrogram)
     # 绘制并保存第一个图表
-    plt.figure(figsize=(6, 7))
+    plt.figure(figsize=(6, 3))
     ax1 = plt.subplot(1, 2, 1)
     im1 = ax1.matshow(data_spec_dB, cmap='viridis', origin='lower')    
     ax1.set_title('Data Spectrogram (dB)')
@@ -217,7 +217,7 @@ def save_fmcw(out_dir, data, pred, cond, batch,index=0):
     
     # Create a subplot with two columns (one for each spectrogram)
     # 绘制并保存第一个图表
-    plt.figure(figsize=(6, 7))
+    plt.figure(figsize=(6, 4))
     ax1 = plt.subplot(2, 1, 1)
     im1 = ax1.matshow(data_spec_dB, cmap='viridis', origin='lower')    
     ax1.set_title('Data Spectrogram (dB)')
