@@ -25,13 +25,13 @@ You can run the evaluation script that produces the major figures in our paper i
 
 **1. (Recommended) Google Colab Notebook**
   * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime tab```, select ```Run all```.
-  * Please wait for 20 seconds as the data are being processed.
+  * Please wait for 15 minutes as the data are being processed.
   * The figures will be displayed in your browser.
     
 **2. Local Setup**
   * Clone this repository.
   * Install [Python 3](https://www.python.org/downloads/) if you have not already. Then, run pip3 install ```-r requirements.txt``` at the root directory of ```/plots``` folder to install the dependencies.
-  * Run code files in ```/plots/code``` directory one by one and wait for 20 seconds as the data are being processed.
+  * Run code files in ```/plots/code``` directory one by one and wait for 15 minutes as the data are being processed.
   * In ```/plots/img``` directory, figures used in our paper can be found.
 
 
