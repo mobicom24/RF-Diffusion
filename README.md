@@ -3,7 +3,7 @@
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing)
 
 ## Overview
-We introduce RF-Diffusion, a versatile generative model designed for wireless data. RF-Diffusion is capable of generating various types of signals, including Wi-Fi, FMCW Radar, 5G, and even modalities beyond RF (e.g., EEG signal), showcasing RF-Diffusion's prowess across different signal categories. We extensively evaluate RF-Diffusion's generative capabilities and validate its effectiveness in multiple downstream tasks, including Wi-Fi sensing, 5G channel estimation, and EEG denoising.
+We introduce RF-Diffusion, a versatile generative model designed for wireless data. RF-Diffusion is capable of generating various types of signals, including Wi-Fi, FMCW Radar, 5G, and even modalities beyond RF, showcasing RF-Diffusion's prowess across different signal categories. We extensively evaluate RF-Diffusion's generative capabilities and validate its effectiveness in multiple downstream tasks, including wireless sensing and 5G channel estimation.
 
 Our basic implementation of RF-Diffusion is provided in this repository. We have released several medium-sized pre-trained models (each containing 16 to 32 blocks, with 128 or 256 hidden dim) and part of the corresponding data files in [releases](https://github.com/mobicom24/RF-Diffusion/releases/tag/dataset_model), which can be used for performance testing. 
 
@@ -24,7 +24,7 @@ As shown, RF-Diffusion generates signals that accurately retain their physical f
 You can run the evaluation script that produces the major figures in our paper in two ways.
 
 **1. (Recommended) Google Colab Notebook**
-  * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime tab```, select ```Run all```.
+  * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime``` tab, select ```Run all```.
   * Please wait for 15 minutes as the data are being processed.
   * The figures will be displayed in your browser.
     
@@ -74,8 +74,8 @@ For more details about the environment configuration, refer to the `requirement.
 Download or `git clone` the `RF-Diffusion` project. Download and unzip `dataset.zip` and `model.zip` in [releases](https://github.com/mobicom24/RF-Diffusion/releases/tag/dataset_model) to the project directory.
 
 ```bash
-unzip dataset.zip -d [RF-Diffusion root directory]
-unzip model.zip -d [RF-Diffusion root directory]
+unzip -q dataset.zip -d 'RF-Diffusion/dataset'
+unzip -q model.zip -d 'RF-Diffusion'
 ```
 
 The project structure is shown as follows:
@@ -141,7 +141,7 @@ The channel estimation is evaluated based on the [Argos](https://renew.rice.edu/
 
 <div align="center">    <img src=".\img\11-exp-channel-sample.png"  height=230><img src=".\img\12-exp-channel-snr.png" height=230> </div>
 
-
+<!--
 ### 2.3 Supplementary: EEG Signal Denoise
 
 RF-Diffusion is designed to generate a wide range of time-series data. While its primary application is in the wireless/RF signals domain, its capabilities extend beyond that.
@@ -165,14 +165,14 @@ Our EEG denoising evaluation is tested on the [GCTNET](https://github.com/JinY97
 
 
 <div align="center">    <img src=".\img\13-exp-eeg-sample.png"  height=230><img src=".\img\14-exp-eeg-snr.png" height=230> </div>
-
+-->
 ## License
 The code, data and related scripts are made available under the GNU General Public License v3.0. By downloading it or using them, you agree to the terms of this license.
 
 ## Reference
 If you use our dataset in your work, please reference it using
 ```
-@inproceedings {Chi2024RF,
+@inproceedings {chi2024rf,
     author = {Chi, Guoxuan and Yang, Zheng and Wu, Chenshu and Xu, Jingao and Gao, Yuchong and Liu, Yunhao Han, Tony Xiao},
     title = {{RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion}},
     booktitle = {The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom'24)},
