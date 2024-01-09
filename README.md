@@ -1,6 +1,6 @@
 # Artifact for MobiCom'24: RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WjSgjLH27ifC4eYIRfNdNPioPcZ8N8is?usp=sharing)
 
 ## Overview
 We introduce RF-Diffusion, a versatile generative model designed for wireless data. RF-Diffusion is capable of generating various types of signals, including Wi-Fi, FMCW Radar, 5G, and even modalities beyond RF, showcasing RF-Diffusion's prowess across different signal categories. We extensively evaluate RF-Diffusion's generative capabilities and validate its effectiveness in multiple downstream tasks, including wireless sensing and 5G channel estimation.
@@ -24,7 +24,7 @@ As shown, RF-Diffusion generates signals that accurately retain their physical f
 You can run the evaluation script that produces the major figures in our paper in two ways.
 
 **1. (Recommended) Google Colab Notebook**
-  * Simply open [this notebook](https://colab.research.google.com/drive/16Em_iC5Fr154We-CkjCe9oxl3G7ieyWJ?usp=sharing). Under the ```Runtime``` tab, select ```Run all```.
+  * Simply open [this notebook](https://colab.research.google.com/drive/1WjSgjLH27ifC4eYIRfNdNPioPcZ8N8is?usp=sharing). Under the ```Runtime``` tab, select ```Run all```.
   * Please wait for 15 minutes as the data are being processed.
   * The figures will be displayed in your browser.
     
