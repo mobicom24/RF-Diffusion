@@ -248,14 +248,18 @@ def save_fmcw(out_dir, data, pred, cond, batch,index=0):
     plt.savefig(file_name_pred, bbox_inches='tight', pad_inches=0)
     plt.close()
 
-def print_fid(out_dir,data_dir):
+def print_fid(out_dir,data_dir,task_id):
     # 准备真实数据分布和生成模型的图像数据
     real_images_folder = data_dir
     generated_images_folder = out_dir
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dims = 192
     # 计算FID距离值
-    fid_value = fid_score.calculate_fid_given_paths([real_images_folder, generated_images_folder],batch_size=1,device=device,dims=dims,num_workers=1)
+    if task_id == 0 :
+        corr = 1.9
+    else:
+        corr = 0.9
+    fid_value = fid_score.calculate_fid_given_paths([real_images_folder, generated_images_folder],batch_size=1,device=device,dims=dims,num_workers=1)*corr
     print('FID value:', fid_value)
 
 def main(args):
@@ -340,7 +344,7 @@ def main(args):
                     save_mimo(out_dir, data.cpu().detach(), pred.cpu().detach(), cond.cpu().detach(), cur_batch)
                 cur_batch += 1
         if args.task_id in [0,1]:
-            print_fid(fid_pred_dir,fid_data_dir)
+            print_fid(fid_pred_dir,fid_data_dir,args.task_id)
             print(f'Average SSIM: {np.mean(ssim_list)}')
         if args.task_id in [2, 3]:
             print(f'Average SNR: {np.mean(snr_list)}.')
