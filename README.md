@@ -69,7 +69,7 @@ Execute the following commands to configure the development environment.
     pip3 install numpy scipy tensorboard tqdm
     ```
 
-For more details about the environment configuration, refer to the `requirement.txt` file in [releases](https://github.com/mobicom2445/RF-Diffusion/releases/tag/dataset_model).
+For more details about the environment configuration, refer to the `requirements.txt` file in [releases](https://github.com/mobicom24/RF-Diffusion/releases/tag/dataset_model).
 
 Download or `git clone` the `RF-Diffusion` project. Download and unzip `dataset.zip` and `model.zip` in [releases](https://github.com/mobicom24/RF-Diffusion/releases/tag/dataset_model) to the project directory.
 
