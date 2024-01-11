@@ -66,7 +66,7 @@ Execute the following commands to configure the development environment.
     pip3 install torch
     ```
     ```bash
-    pip3 install numpy scipy tensorboard tqdm
+    pip3 install numpy scipy tensorboard tqdm matplotlib torchvision pytorch_fid
     ```
 
 For more details about the environment configuration, refer to the `requirements.txt` file in [releases](https://github.com/mobicom24/RF-Diffusion/releases/tag/dataset_model).
