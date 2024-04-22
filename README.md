@@ -174,7 +174,7 @@ If you use our dataset in your work, please reference it using
 ```
 @inproceedings {chi2024rf,
     author = {Chi, Guoxuan and Yang, Zheng and Wu, Chenshu and Xu, Jingao and Gao, Yuchong and Liu, Yunhao Han, Tony Xiao},
-    title = {{RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion}},
+    title = {RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion},
     booktitle = {The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom'24)},
     year = {2024},
     publisher = {ACM}
