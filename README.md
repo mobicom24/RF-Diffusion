@@ -18,6 +18,7 @@ Please note that all these methods generate the **raw complex-valued signals**, 
 | **FMCW**   | <img src="./img/0-fmcw-1-gt.gif" height=100> <img src="./img/0-fmcw-2-gt.gif"  height=100> | <img src="./img/0-fmcw-1-ours.gif" height=100> <img src="./img/0-fmcw-2-ours.gif" height=100> | <img src="./img/0-fmcw-1-ddpm.gif" height=100> <img src="./img/0-fmcw-2-ddpm.gif" height=100> | <img src="./img/0-fmcw-1-gan.gif" height=100> <img src="./img/0-fmcw-2-gan.gif" height=100> | <img src="./img/0-fmcw-1-vae.gif" height=100> <img src="./img/0-fmcw-2-vae.gif" height=100> |
 
 
+
 As shown, RF-Diffusion generates signals that accurately retain their physical features.
 
 ## Running the Evaluation Script
@@ -172,13 +173,13 @@ The code, data and related scripts are made available under the GNU General Publ
 ## Reference
 If you use our dataset in your work, please reference it using
 ```
-@inproceedings {chi2024rf,
-    author = {Chi, Guoxuan and Yang, Zheng and Wu, Chenshu and Xu, Jingao and Gao, Yuchong and Liu, Yunhao Han, Tony Xiao},
-    title = {{RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion}},
-    booktitle = {The 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom'24)},
-    year = {2024},
-    publisher = {ACM}
-  }
+@inproceedings{chi2024rf,
+  title={RF-Diffusion: Radio Signal Generation via Time-Frequency Diffusion},
+  author={Chi, Guoxuan and Yang, Zheng and Wu, Chenshu and Xu, Jingao and Gao, Yuchong and Liu, Yunhao and Han, Tony Xiao},
+  booktitle={Proceedings of the 30th Annual International Conference on Mobile Computing and Networking},
+  pages={77--92},
+  year={2024}
+}
 ```
 
 
